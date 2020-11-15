@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+:root{
+    --dark:#323232;
+    --adaptive:* ((100vw - 320px) / (1920 - 320));
+    --green:rgb(39, 174, 96);
+    --greenop:rgb(39 174 96 / 80%);
+}
+::-webkit-scrollbar-button{background-image:url('');background-repeat:no-repeat;width:5px;height:0}::-webkit-scrollbar-track{background-color:var(--dark)}::-webkit-scrollbar-thumb{-webkit-border-radius:0;border-radius:0;background:var(--green)}::-webkit-scrollbar-thumb:hover{background:linear-gradient(180deg,var(--dark) 0,var(--green) 100%)}::-webkit-resizer{background-image:url('');background-repeat:no-repeat;width:4px;height:0}::-webkit-scrollbar{width:6px;height:6px}
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+}
+.btn{
+    border-radius: 5px;
+    padding: 16px 44px;
+}
+.fw-800{
+    font-weight: 800;
+}
+.fw-600{
+    font-weight: 600;
+}
+.fw-600_hov:hover,.fw-600_hov:active,.fw-600_hov:focus{
+    font-weight: 600;
+}
+.fw-400{
+    font-weight: 400;
+}
+.fs-30{
+    font-size:calc(20px + 10 var(--adaptive)) ;
+}
+.fs-22{
+    font-size:calc(16px + 6 var(--adaptive)) ;
+}
+.fs-18{
+    font-size:calc(14px + 4 var(--adaptive)) ;
+}
+.bg-dark{
+    background: var(--dark);
+}
+.bg-white{
+    background: white;
+}
+.bg-orange{
+    background-color: #F2994A;
+}
+.color-black{
+    color: black;
+}
+.color-white{
+    color: white;
+}
+.wrapper{
+    max-width: 1620px;
+    margin:0 auto;
+    padding:0 calc(20px + 30 var(--adaptive));
+}
+.wrapper-0{
+    max-width: 1620px;
+    margin:0 auto;
+    padding:0 calc(0px + 50 var(--adaptive));
+}
+.mr-auto{
+    margin-right: auto;
+}
+.ml-auto{
+    margin-left: auto;
+}
+.mt-auto{
+    margin-top: auto;
+}
+.mb-auto{
+    margin-bottom: auto;
+}
+.mb-0{
+    margin-bottom: 0 !important;
+}
+.text-center{
+    text-align: center;
+}
+.flex{
+    display: flex;
+}
+.flex-col{
+    flex-direction: column;
+}
+.w-full{
+    width: 100%;
+}
+.w-screen{
+    width: 100vw;
+}
+.h-auto{
+    height: auto;
+}
+.h-full{
+    height: 100%;
+}
+.h-screen{
+    height: 100vh;
+}
+.h-inh{
+    height: inherit;
+}
+.min-h-screen{
+    min-height: 100vh;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.justify-around{
+    justify-content: space-around;
+}
+.justify-evenly{
+    justify-content: space-evenly;
+}
+.justify-center{
+    justify-content: center;
+}
+.order-1{
+    order:1;
+}
+.order-2{
+    order:2;
+}
+.order-3{
+    order:3;
+}
+.flexgrow1{
+    flex-grow: 1;
+}
+.align-center{
+    align-items: center;
+}
+.bgp-center{
+    background-position: center;
+}
+.bgr-norepeat{
+    background-repeat: no-repeat;
+}
+.bgs-contain{
+    background-size: contain;
+}
+.bgs-cover{
+    background-size: cover;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.flex-wrap-rev{
+    flex-wrap: wrap-reverse;
+}
+.fixed{
+    position: fixed;
+}
+.cover__bg{
+    background-color: var(--greenop);
+    min-height: calc(100vh - (80px + 10 var(--adaptive)));
+}
+.input__area{
+    background: #FFFFFF;
+    opacity: 0.5;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}

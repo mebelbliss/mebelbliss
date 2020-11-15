@@ -1,1 +1,111 @@
-Hello world
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+    <header class="header bg-dark w-screen fixed">
+        <div class="wrapper">
+            <div class="flex justify-between align-center flex-wrap">
+                <div class="header__logo h-auto order-1 flexgrow1 bgp-center bgr-norepeat bgs-contain">
+
+                </div>
+                <nav class="flexgrow1 nav hamburger-menu flex order-2 sm__order-3 fw-400">
+                    
+                    <input id="menu__toggle" type="checkbox" />
+                    <label class="menu__btn hide__btn" for="menu__toggle">
+                    <span></span>
+                    </label>
+                    <label class="menu__area" for="menu__toggle"></label>
+                    <ul class="w-full menu__box flex justify-between align-center">
+                        <li class="header__item fw-400">
+                            <a href="#!" class="list__link menu__item">Главная</a>
+                        </li>
+                        <li class="header__item fw-400">
+                            <a href="#!" class="list__link menu__item">Услуги</a>
+                        </li>
+                        <li class="header__item fw-400">
+                            <a href="#!" class="list__link menu__item">Портфолио</a>
+                        </li>
+                        <li class="header__item fw-400">
+                            <a href="#form" class="list__link menu__item">Заявка</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="flexgrow1 icon__block order-3 sm__order-2">
+                    <div class="icon__item">
+                    <a class="flex w-full" href="#!">
+                        <div class="icon__img call__img"></div>
+                        <div class="icon__text"><p>+7(911)666 66 66</p></div>
+                    </a>
+                    </div>
+                    <div class="icon__item">
+                        <a class="flex w-full" href="#!">
+                            <div class="icon__img">☎️</div>
+                            <div class="icon__text"><p>+7(911)666 66 66</p></div>
+                        </a>
+                    </div>
+                    <div class="icon__item">
+                        <a class="flex w-full" href="#!">
+                            <div class="icon__img">☎️</div>
+                            <div class="icon__text"><p>+7(911)666 66 66</p></div>
+                        </a>
+                    </div>
+                    <div class="icon__item">
+                        <a class="flex w-full" href="#!">
+                            <div class="icon__img">☎️</div>
+                            <div class="icon__text"><p>+7(911)666 66 66</p></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="header-pod"></div>
+    <main class="main">
+        <section class="form__section bgs-cover h-auto">
+            <div class="cover__bg w-full h-inh ">
+                <div class="wrapper-0 flex flex-col justify-evenly h-inh">
+                    <div class="form__margin name fs-30 fw-800">
+                        ЗАЯВКА
+                    </div>
+                    <div class="form__margin flex align-center justify-around flex-wrap-rev mb-auto">
+                        <div class="numbers flex-col flex align-center w-full">
+                            <p class="fs-30">Позвоните нам</p>
+                            <div class="icon__number flex align-center"><div class="call__img"></div>
+                            <p>+7(911) 151-12-54</p></div>
+                            <div class="icon__number flex align-center"><div class="call__img"></div>
+                            <p>+7(911) 151-12-54</p></div>
+                            
+                        </div>
+                        <div class="form__block flex align-center justify-center flex-col text-center bg-white color-black">
+                            <p class="fs-30">Оставьте заявку</p>
+                            <p class="fs-18">После отправки в течении короткого времени наш оператор свяжется с Вами!</p>
+                            <form action="" class="form flex align-center justify-center flex-col">
+                                <label class="fs-22 mr-auto">Имя</label>
+                                <input placeholder="Введите имя..." class="input__area" type="text">
+                                <label class="fs-22 mr-auto">Номер телефона</label>
+                                <input placeholder="+7(___)___-__-__" class="input__area" type="text">
+                                <label class="fs-22 mr-auto">E-mail</label>
+                                <input placeholder="Введите E-mail" class="input__area" type="text">
+                                <input class="btn bg-orange color-white" type="submit" value="Оставить заявку">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><section class="form__section h-screen">
+
+        </section>
+    </main>
+    <footer class="footer bg-dark">
+
+    </footer>
+</body>
+</html>
