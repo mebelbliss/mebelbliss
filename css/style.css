@@ -198,7 +198,7 @@
   transition: opacity 0.5s ease;
 }
 .form__section{
-  background-image: url(../img/formbg.png);
+  background-image: url(../img/formbg.jpg);
 }
 .form__margin{
   margin-bottom: calc(3vh + 6 var(--adaptive));
