@@ -13,10 +13,11 @@
   min-height: 64px;
 }
 .nav{
-	min-width: 50px;
+  min-width: 50px;
+  display: none;
 }
 .header__item{
-  margin:10px
+  padding:10px
 }
 .menu__list{}
 .list__link{
@@ -124,21 +125,27 @@
   align-items:center;
   overflow:hidden;
 }
-.icon__text > p{
-  padding-left:10px;
-}
 .icon__img{
   left:0;
   min-width:44px;
   display:flex;
   justify-content:center;
   align-items:center;
-}
-.call__img{
-  background-image: url(../img/svg/call.svg);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+}
+.call__img{
+  background-image: url(../img/svg/call.svg);
+}
+.inst__img{
+  background-image: url(../img/svg/inst.svg);
+}
+.wa__img{
+  background-image: url(../img/svg/wa.svg);
+}
+.mail__img{
+  background-image: url(../img/svg/mail.svg);
 }
 .icon__text{
   display:flex;
@@ -155,7 +162,7 @@
   width:280px;
 }
 .icon__item:nth-child(2){
-  background: #67FF76;
+  background: #5fe06b;
 }
 .icon__item:nth-child(3){
   background: #D35151;
@@ -163,15 +170,46 @@
 .icon__item:nth-child(4){
   background: #A540E2;
 }
+.form{
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+.thanks{
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.5s ease;
+}
+.send > .thanks{
+  opacity: 1;
+  z-index: 0;
+}
+.send > input,.send > label{
+  opacity: 0;
+}
+.form > input,.form > label{
+  transition: opacity 0.5s ease;
+}
 .form__section{
   background-image: url(../img/formbg.png);
 }
 .form__margin{
-  margin-top: calc(35px + 60 var(--adaptive));
+  margin-bottom: calc(3vh + 6 var(--adaptive));
+}
+.form__padding{
+  padding-top: calc(3vh + 6 var(--adaptive));
+  padding-bottom: calc(3vh + 6 var(--adaptive));
 }
 .form__block{
   max-width: 600px;
-  padding:calc(6px + 48 var(--adaptive));
+  padding:calc(6px + 30 var(--adaptive));
 }
 .form__block>p{
   margin-top:calc(24px + 12 var(--adaptive));
@@ -192,12 +230,17 @@
   max-height: 320px;
   border: solid 3px white;
   padding:calc(40px + 14 var(--adaptive));
-  margin:calc(0px + 130 var(--adaptive));
+  margin:calc(0px + 130 var(--adaptive)) 0;
 }
 .icon__number>.call__img{
   min-width: 44px;
   min-height: 44px;
   margin-right:calc(8px + 5 var(--adaptive));
+}
+.name>div{
+  width: calc(76px + 57 var(--adaptive));
+  margin:0 14px;
+  height: 5px; 
 }
 .numbers>*{
   margin-bottom:30px;

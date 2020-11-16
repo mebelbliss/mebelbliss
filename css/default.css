@@ -40,6 +40,9 @@ body{
 .fs-18{
     font-size:calc(14px + 4 var(--adaptive)) ;
 }
+.fs-0{
+    font-size:0;
+}
 .bg-dark{
     background: var(--dark);
 }
@@ -64,6 +67,12 @@ body{
     max-width: 1620px;
     margin:0 auto;
     padding:0 calc(0px + 50 var(--adaptive));
+}
+.relative{
+    position: relative;
+}
+.m-auto{
+    margin: auto;
 }
 .mr-auto{
     margin-right: auto;
@@ -168,3 +177,9 @@ body{
     border: 1px solid #000000;
     border-radius: 10px;
 }
+.opacity-0{
+    opacity: 0;
+}
+.opacity-1{
+    opacity: 1;
+  }
