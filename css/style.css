@@ -173,6 +173,7 @@
 .form{
   opacity: 1;
   transition: opacity 0.5s ease;
+  width:100%;
 }
 .thanks{
   position: absolute;
@@ -218,6 +219,7 @@
   height: 53px;
   padding: 15px 22px;
   margin-bottom: 22px;
+  width:100%;
 }
 .form > .mr-auto{
   margin-bottom: 12px;
