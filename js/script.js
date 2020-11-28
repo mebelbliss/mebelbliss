@@ -13,3 +13,4 @@ window.onload = function(){for (var i = 0; i < reflink.length; i++) {
         webvisor:true
    });
 }};
+function onSubmit(token){document.getElementById("form").submit();}
