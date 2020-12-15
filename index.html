@@ -12,8 +12,8 @@
 <body>
     <header class="header bg-dark w-screen fixed">
         <div class="wrapper">
-            <div class="flex justify-between align-center flex-wrap">
-                <a href="/" class="header__logo h-auto order-1 flex-grow bg-center bg-no-repeat bgs-contain fs-0">
+            <div class="flex justify-between items-center flex-wrap">
+                <a href="/" class="header__logo h-auto order-1 flex-grow bg-center bg-no-repeat bg-contain fs-0">
                     Главная
                 </a>
                 <nav class="flex-grow nav hamburger-menu flex order-2 sm__order-3 fw-400">
@@ -23,7 +23,7 @@
                     <span></span>
                     </label>
                     <label class="menu__area" for="menu__toggle"></label>
-                    <ul class="w-full menu__box flex justify-between align-center">
+                    <ul class="w-full menu__box flex justify-between items-center">
                         <li class="header__item m-auto fw-400">
                             <a href="#!" class="list__link menu__item">Главная</a>
                         </li>
@@ -75,18 +75,18 @@
         <section class="form__section bgs-cover h-auto">
             <div class="cover__bg w-full h-inh ">
                 <div class="wrapper-0 flex flex-col justify-evenly h-inh form__padding">
-                    <div class="flex align-center form__margin name fs-30 fw-800">
+                    <div class="flex items-center form__margin name fs-30 fw-800">
                         <div class="bg-white"></div><p>ЗАЯВКА</p> 
                     </div>
-                    <div class="flex align-center justify-around flex-wrap-rev mb-auto">
-                        <div class="numbers flex-col flex align-center w-full">
+                    <div class="flex items-center justify-around flex-wrap-reverse mb-auto">
+                        <div class="numbers flex-col flex items-center w-full">
                             <p class="fs-30">Позвоните нам</p>
-                            <a href="tel:+79614300703" class="icon__number flex align-center"><div class="call__img bg-contain bg-center bg-no-repeat"></div>
+                            <a href="tel:+79614300703" class="icon__number flex items-center"><div class="call__img bg-contain bg-center bg-no-repeat"></div>
                             <p>+7(961)430-07-03</p></a>
                             
                             
                         </div>
-                        <div class="form__block flex align-center justify-center flex-col text-center bg-white color-black">
+                        <div class="form__block flex items-center justify-center flex-col text-center bg-white text-black">
                             <p class="fs-30">Оставьте заявку</p>
                             <p class="fs-18">После отправки в течении короткого времени наш оператор свяжется с Вами!</p>
                             <script>var submitted=false;</script>
@@ -97,7 +97,7 @@
                             }, 6000)}"></iframe>
                             
                                 
-                                <form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLScDVMiyvu3aC4l_d24c9f0IkxyNwhTDd3ZD7fiSejZUYtRZEg/formResponse" target="hidden_iframe" id="form" method="POST" class="relative form flex align-center justify-center flex-col" onsubmit="submitted=true">
+                                <form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLScDVMiyvu3aC4l_d24c9f0IkxyNwhTDd3ZD7fiSejZUYtRZEg/formResponse" target="hidden_iframe" id="form" method="POST" class="relative form flex items-center justify-center flex-col" onsubmit="submitted=true">
                                     <div id="send__form" class="thanks">Спасибо, в ближайшее время мы с вами свяжемся!</div>
                                     <label class="fs-22 mr-auto">Имя</label>
                                     <input placeholder="Введите имя..." name="entry.1434433235" class="input__area" type="text" required>
@@ -106,7 +106,7 @@
                                     <label class="fs-22 mr-auto">E-mail</label>
                                     <input placeholder="Введите E-mail" name="entry.923070370" class="input__area" type="email">
                                     <input class="refclass" type="hidden" name="entry.2139073903">
-                                    <input class="btn bg-orange color-white g-recaptcha" type="submit" data-sitekey="6LceiPAZAAAAAHYFGwOu4JwbRdorskL6GsUcMBE7" data-callback="onSubmit" data-action="submit" value="Оставить заявку">
+                                    <input class="btn bg-orange text-white g-recaptcha" type="submit" data-sitekey="6LceiPAZAAAAAHYFGwOu4JwbRdorskL6GsUcMBE7" data-callback="onSubmit" data-action="submit" value="Оставить заявку">
                                 </form>
                             
                         </div>
