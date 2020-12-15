@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "watch": "cross-env NODE_ENV=development postcss css/test.tailwind.css -o  style.css --watch",
-    "build": "cross-env NODE_ENV=production postcss css/test.tailwind.css -o  style.css"
+    "watch": "cross-env NODE_ENV=development postcss css/full.tailwind.css -o  style.css --watch",
+    "build": "cross-env NODE_ENV=production postcss css/full.tailwind.css -o  style.css"
   },
   "dependencies": {
     "autoprefixer": "^10.1.0",

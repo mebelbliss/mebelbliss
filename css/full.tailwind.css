@@ -1,18 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.btn{
-    @apply flex flex-row;
-}
-.test{
-    @apply py-1 sm:px-10 md:container lg:delay-200;
-}
-.proverka{
-    @apply grid grid-flow-row;
-}
-.darling{
-    @apply hidden;
-}
-::placeholder{
-    @apply flex flex-col;
-}
