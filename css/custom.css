@@ -110,8 +110,7 @@
   min-height: 64px
 }
 .nav {
-  min-width: 50px;
-  display: none
+  min-width: 50px
 }
 .header__item {
   padding: 10px
