@@ -97,7 +97,13 @@
 }
 .header {
   max-height: 140px;
-  z-index: 10
+  -webkit-transition: -webkit-box-shadow .6s linear;
+  transition: box-shadow .6s linear;
+  transition: box-shadow .6s linear,-webkit-box-shadow .6s linear
+}
+.header._untop {
+  -webkit-box-shadow: 0 -10px 40px var(--dark);
+  box-shadow: 0 -10px 40px var(--dark)
 }
 .header-pod {
   height: calc(80px + 10 var(--adaptive))
@@ -110,10 +116,7 @@
   min-height: 64px
 }
 .nav {
-  min-width: 50px
-}
-.header__item {
-  padding: 10px
+  max-width: 50px
 }
 .list__link {
   font-style: normal;
@@ -131,34 +134,7 @@
 .list__link:hover {
   opacity: .75
 }
-#menu__toggle {
-  opacity: 0;
-  display: none
-}
-#menu__toggle:checked ~ .menu__btn > span {
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg)
-}
-#menu__toggle:checked ~ .menu__btn > span::before {
-  top: 0;
-  -webkit-transform: rotate(0);
-  transform: rotate(0)
-}
-#menu__toggle:checked ~ .menu__btn > span::after {
-  top: 0;
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg)
-}
-#menu__toggle:checked ~ .menu__box {
-  visibility: visible;
-  right: 0;
-  overflow: auto
-}
-#menu__toggle:checked ~ .menu__area {
-  display: block
-}
 .menu__area {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -167,7 +143,6 @@
   height: 100vh
 }
 .menu__btn {
-  display: none;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -178,6 +153,31 @@
   height: 26px;
   cursor: pointer;
   z-index: 1
+}
+@media (max-width:768px) {
+  .menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: calc(80px + 10 var(--adaptive));
+    right: -100%;
+    max-width: 300px;
+    width: 75.1vw;
+    height: 100%;
+    padding: 6vh 0!important;
+    background: -webkit-gradient(linear,left top,left bottom,from(var(--fiol)),to(var(--purp)));
+    background: linear-gradient(180deg,var(--fiol) 0,var(--purp) 100%);
+    -webkit-box-shadow: 1px 0 6px rgba(0,0,0,.596);
+    box-shadow: 1px 0 6px rgba(0,0,0,.596);
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+    background-color: var(--dark)
+  }
+}
+.menu__item {
+  display: block;
+  -webkit-transition-duration: .5s;
+  transition-duration: .5s
 }
 .menu__btn > span,
 .menu__btn > span::after,
@@ -198,21 +198,8 @@
   content: '';
   top: 8px
 }
+.header:after,
 .icon__block {
-  max-width: 412px;
-  width: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  list-style-type: none;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  position: relative;
   height: calc(80px + 10 var(--adaptive))
 }
 .icon__item {
@@ -237,20 +224,21 @@
   overflow: hidden
 }
 .icon__img {
-  left: 0;
   min-width: 44px;
+  min-height: 26px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  left: 0
 }
 .call__img {
   background-image: url(../img/svg/call.svg)
@@ -286,7 +274,7 @@
 }
 .icon__item:nth-child(1) {
   background-color: #6792ff;
-  max-width: 280px;
+  max-width: 44px;
   width: 280px
 }
 .icon__item:nth-child(2) {
@@ -298,11 +286,20 @@
 .icon__item:nth-child(4) {
   background: #a540e2
 }
+.first-slide:before {
+  content: "";
+  position: absolute;
+  background-image: url(../img/svg/shadowgrad.svg);
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  bottom: 0
+}
 .form {
   opacity: 1;
   -webkit-transition: opacity .5s;
   transition: opacity .5s;
-  width: 100%
+  max-width: 350px
 }
 .thanks {
   position: absolute;
@@ -336,9 +333,6 @@
 .form > label {
   -webkit-transition: opacity .5s;
   transition: opacity .5s
-}
-.form__section {
-  background-image: url(../img/formbg.jpg)
 }
 .form__margin {
   margin-bottom: calc(3vh + 6 var(--adaptive))

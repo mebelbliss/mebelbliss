@@ -1,4 +1,14 @@
 var reflink = document.querySelectorAll('.refclass');
+var getheader = document.getElementById('header');
+window.onscroll = function() {scrollFunction()};
+var h = 50;//window.innerHeight/4;
+function scrollFunction() {
+if (document.body.scrollTop > h || document.documentElement.scrollTop > h) {
+     getheader.classList.add("_untop");
+     document.getElementById('nav').classList.add("nav-hide");} 
+else {getheader.classList.remove("_untop");
+     document.getElementById('nav').classList.remove("nav-hide");}
+};
 window.onload = function(){for (var i = 0; i < reflink.length; i++) {
   reflink[i].value = document.referrer;
 

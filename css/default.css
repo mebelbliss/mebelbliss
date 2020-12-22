@@ -40,6 +40,9 @@ body {
   letter-spacing: .05em;
   color: #fff
 }
+input:focus {
+  outline: 0
+}
 .btn {
   border-radius: 5px;
   padding: 16px 44px
@@ -84,8 +87,13 @@ body {
   margin: 0 auto;
   padding: 0 calc(0px + 50 var(--adaptive))
 }
-.cover__bg {
-  background-color: var(--greenop);
+.min-h-inerit {
+  min-height: inherit
+}
+.cover-green {
+  background-color: var(--greenop)
+}
+.min-h-screen-header {
   min-height: calc(100vh - (80px + 10 var(--adaptive)))
 }
 .input__area {
