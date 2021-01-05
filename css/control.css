@@ -20,3 +20,47 @@
 #menu__toggle:checked ~ .menu__area {
   display: block
 }
+#callback-form:checked ~ div {
+  right: 0;
+  left: 0
+}
+@media (min-width:640px) {
+  #callback-form:checked ~ div {
+    -webkit-transform: rotate(0) translateX(0);
+    transform: rotate(0) translateX(0)
+  }
+}
+#callback-form:checked ~ div > label {
+  display: none
+}
+#callback-form:checked ~ .cheked {
+  right: -100%
+}
+#callback-form:checked ~ .closearea {
+  opacity: 1;
+  right: 0;
+  -webkit-transition: opacity .5s linear;
+  transition: opacity .5s linear
+}
+#footer-col-1:checked ~ div:nth-child(3) > div > div > div > .gal-x > div > span,
+#footer-col-2:checked ~ div:nth-child(5) > div > div > div > .gal-x > div > span,
+#footer-col-3:checked ~ div:nth-child(7) > div > div > div > .gal-x > div > span {
+  height: 100%
+}
+#footer-col-1:checked ~ div:nth-child(3) > div > div > div > .gal-x > div,
+#footer-col-2:checked ~ div:nth-child(5) > div > div > div > .gal-x > div,
+#footer-col-3:checked ~ div:nth-child(7) > div > div > div > .gal-x > div {
+  --tw-translate-y: 0.25rem
+}
+#footer-col-1:checked ~ div:nth-child(3) > div > div > div > label:nth-child(2),
+#footer-col-2:checked ~ div:nth-child(5) > div > div > div > label:nth-child(2),
+#footer-col-3:checked ~ div:nth-child(7) > div > div > div > label:nth-child(2) {
+  visibility: visible
+}
+#footer-col-1:checked ~ div:nth-child(3) > ul,
+#footer-col-2:checked ~ div:nth-child(5) > ul,
+#footer-col-3:checked ~ div:nth-child(7) > ul {
+  max-height: 100vh;
+  padding-top: 1rem;
+  padding-bottom: 1rem
+}

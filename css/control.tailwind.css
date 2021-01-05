@@ -1,3 +1,4 @@
+
 #menu__toggle:checked ~ .menu__btn > span {
     transform: rotate(45deg);
 }
@@ -16,4 +17,42 @@
 }
 #menu__toggle:checked ~ .menu__area {
 	display: block;
+}
+#callback-form:checked ~ div{
+	@apply left-0 right-0;
+}
+@screen sm{
+	#callback-form:checked ~ div{
+		transform:rotate(0) translateX(0);
+	}
+}
+#callback-form:checked ~ div > label{
+	@apply hidden;
+}
+#callback-form:checked ~ .cheked{
+	@apply -right-full;
+}
+#callback-form:checked ~ .closearea{
+	@apply right-0 opacity-100;
+	transition: opacity 0.5s linear;
+}
+#footer-col-1:checked ~ div:nth-child(3) > div > div > div > .gal-x > div > span,
+#footer-col-2:checked ~ div:nth-child(5) > div > div > div > .gal-x > div > span,
+#footer-col-3:checked ~ div:nth-child(7) > div > div > div > .gal-x > div > span{
+	@apply h-full;
+}
+#footer-col-1:checked ~ div:nth-child(3) > div > div > div > .gal-x > div,
+#footer-col-2:checked ~ div:nth-child(5) > div > div > div > .gal-x > div,
+#footer-col-3:checked ~ div:nth-child(7) > div > div > div > .gal-x > div{
+	@apply translate-y-1;
+}
+#footer-col-1:checked ~ div:nth-child(3) > div > div > div > label:nth-child(2),
+#footer-col-2:checked ~ div:nth-child(5) > div > div > div > label:nth-child(2),
+#footer-col-3:checked ~ div:nth-child(7) > div > div > div > label:nth-child(2){
+	@apply visible;
+}
+#footer-col-1:checked ~ div:nth-child(3) > ul,
+#footer-col-2:checked ~ div:nth-child(5) > ul,
+#footer-col-3:checked ~ div:nth-child(7) > ul{
+	@apply max-h-screen py-4;
 }

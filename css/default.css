@@ -1,8 +1,8 @@
 :root {
   --dark: #323232;
+  --dark-2: #262626;
   --adaptive: * ((100vw - 320px) / (1920 - 320));
-  --green: rgb(39, 174, 96);
-  --greenop: rgb(39 174 96 / 80%)
+  --green: rgb(39, 174, 96)
 }
 ::-webkit-scrollbar-button {
   background-image: url('');
@@ -31,6 +31,9 @@
   width: 6px;
   height: 6px
 }
+html {
+  scroll-behavior: smooth
+}
 body {
   font-family: Montserrat,sans-serif;
   font-style: normal;
@@ -43,9 +46,37 @@ body {
 input:focus {
   outline: 0
 }
-.btn {
-  border-radius: 5px;
-  padding: 16px 44px
+.b-lazy,
+.swiper-lazy {
+  -webkit-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+  opacity: 0
+}
+.b-lazy.b-loaded,
+.swiper-lazy.swiper-lazy-loaded {
+  opacity: 1
+}
+.text-green {
+  color: var(--green)
+}
+.bg-green {
+  --tw-bg-opacity: 1;
+  background-color: rgba(39,174,96,var(--tw-bg-opacity))
+}
+.text-shadow-2xl {
+  text-shadow: 0 0 1rem #000
+}
+.text-shadow-5xl {
+  text-shadow: 0 0 3rem #000
+}
+.swiper-container {
+  list-style-type: none;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  z-index: 1
 }
 .fw-800 {
   font-weight: 800
@@ -74,6 +105,9 @@ input:focus {
 .bg-dark {
   background: var(--dark)
 }
+.bg-dark-2 {
+  background: var(--dark-2)
+}
 .bg-orange {
   background-color: #f2994a
 }
@@ -82,19 +116,35 @@ input:focus {
   margin: 0 auto;
   padding: 0 calc(20px + 30 var(--adaptive))
 }
+.wrapper-px {
+  padding-left: calc(20px + 30 var(--adaptive));
+  padding-right: calc(20px + 30 var(--adaptive))
+}
+.wrapper-px-0 {
+  padding-left: calc(0px + 50 var(--adaptive));
+  padding-right: calc(0px + 50 var(--adaptive))
+}
 .wrapper-0 {
   max-width: 1620px;
   margin: 0 auto;
   padding: 0 calc(0px + 50 var(--adaptive))
 }
+.z-1 {
+  z-index: 1
+}
+.-z-1 {
+  z-index: -1
+}
 .min-h-inerit {
   min-height: inherit
 }
-.cover-green {
-  background-color: var(--greenop)
-}
 .min-h-screen-header {
   min-height: calc(100vh - (80px + 10 var(--adaptive)))
+}
+.h-max {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content
 }
 .input__area {
   background: #fff;

@@ -7,41 +7,42 @@
     <meta name="description" content="Изготовим корпусную мебель на заказ в Ростове-на-Дону, быстро качественно и с удовольствием | MebelBliss">
     <link rel="canonical" href="https://mebelbliss.ru"/>
     <link rel="shortcut icon" href="/img/svg/logo1.svg" type="image/svg+xm">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="header bg-dark w-screen fixed z-50" id="header">
         <div class="wrapper">
             <div class="flex justify-between items-center flex-wrap">
-                <a href="/" class="header__logo h-auto order-1 flex-grow bg-center bg-no-repeat bg-contain fs-0">
+                <a href="/" class="relative flex items-center header__logo h-auto order-1 flex-grow bg-center bg-no-repeat bg-contain fs-0 mr-2">
                     Главная
                 </a>
-                <nav id="nav" class="flex-grow nav hamburger-menu flex xl:order-2 order-3 fw-400 md:max-w-full md:w-auto">
+                <nav id="nav" class="flex-grow nav md:max-w-none md:max-w-full md:w-auto hamburger-menu flex xl:order-2 order-3 fw-400 ">
                     
                     <input id="menu__toggle" class="hidden" type="checkbox" />
                     <label class="menu__btn flex md:hidden" for="menu__toggle">
                     <span></span>
                     </label>
-                    <label class="menu__area block md:hidden" for="menu__toggle"></label>
-                    <ul class="w-full menu__box flex justify-between items-center">
-                        <li class="header__item m-auto fw-400">
-                            <a href="#!" class="list__link py-3 px-5 xl:px-4 menu__item">Главная</a>
+                    <label class="menu__area hidden" for="menu__toggle"></label>
+                    <ul class="sm:w-full menu__box md:flex justify-between items-center block fixed md:static md:max-w-none md:visible md:shadow-none invisible h-full duration-500 ">
+                        <li class="m-auto fw-400">
+                            <a href="#!" class="list__link py-3 px-5 md:px-2 lg:px-5 xl:px-4 menu__item"><p class="active__item inactive__item relative">Главная</p></a>
                         </li>
-                        <li class="header__item m-auto fw-400">
-                            <a href="#!" class="list__link py-3 px-5 xl:px-4 menu__item">Услуги</a>
+                        <li class="m-auto fw-400">
+                            <a href="#!" class="list__link py-3 px-5 md:px-2 lg:px-5 xl:px-4 menu__item"><p class="inactive__item relative">Услуги</p></a>
                         </li>
-                        <li class="header__item m-auto fw-400">
-                            <a href="#!" class="list__link py-3 px-5 xl:px-4 menu__item">Преимущества</a>
+                        <li class="m-auto fw-400">
+                            <a href="#!" class="list__link py-3 px-5 md:px-2 lg:px-5 xl:px-4 menu__item"><p class="inactive__item relative">Преимущества</p></a>
                         </li>
-                        <li class="header__item m-auto fw-400">
-                            <a href="#!" class="list__link py-3 px-5 menu__item">Портфолио</a>
+                        <li class="m-auto fw-400">
+                            <a href="#!" class="list__link py-3 px-5 md:px-2 lg:px-5 xl:px-4 menu__item"><p class="inactive__item relative">Портфолио</p></a>
                         </li>
-                        <li class="header__item m-auto fw-400">
-                            <a href="#form" class="list__link py-3 px-4 xl:px-4 menu__item">Заявка</a>
+                        <li class="m-auto fw-400">
+                            <a href="#form" class="list__link py-3 px-5 md:px-2 lg:px-5 xl:px-4 menu__item"><p class="inactive__item relative">Заявка</p></a>
                         </li>
                     </ul>
                 </nav>
-                <div class="ml-2 sm:ml-0 w-auto flex flex-row justify-end relative flex-grow icon__block xl:order-3 order-2 max-w-max mx-auto md:mx-0">
+                <div class="w-auto flex flex-row justify-end relative flex-grow icon__block xl:order-3 order-2 mx-auto md:mx-0">
                     <div class="icon__item">
                         <a class="flex w-full items-center h-full" href="tel:+79614300703">
                             <div class="icon__img call__img"></div>
@@ -72,16 +73,286 @@
     </header>
     <div id="header-pod" class="header-pod"></div>
     <main class="main">
-        <section class="min-h-screen-header first-slide relative bg-cover bg-bottom" style="background-image: url(../img/first-bg.jpg);">
+        <section class="min-h-screen-header first-slide relative flex items-center justify-center z-1 overflow-hidden bg-black">
+            <div class="wrapper flex flex-col sm:flex-row absolute inset-0 items-center justify-between overflow-hidden xl:items-start z-1">
+                <div class="flex flex-col items-center justify-between md:justify-evenly pb-3 pt-12 w-full h-full lg:w-1/2 xl:w-2/5 lg:items-start ">
+                    <div class="flex flex-col items-start font-bold relative first_line lg:ml-2">
+                        <p class="text-4xl sm:text-5xl text-shadow-2xl">КОРПУСНАЯ</p>
+                        <p class="text-6xl sm:text-7xl text-green text-shadow-2xl">МЕБЕЛЬ</p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row w-full justify-evenly lg:justify-between items-center">
+                        <a href="#!" class="btn bg-orange mb-4 sm:mb-0 min-w-full sm:min-w-0 flex-grow">Заказать</a>
+                        <a href="#!" class="btn btn-border min-w-full sm:min-w-0 flex-grow">Подробнее</a>
+                    </div>
+                    <div class="swiper-container swiper1 w-full h-12 sm:flex items-center justify-center hidden">
+                        <div class="swiper-wrapper h-0 w-0">
+                            <div class="swiper-slide"></div>
+                            <div class="swiper-slide"></div>
+                            <div class="swiper-slide"></div>
+                        </div>
+                        
+        
+                        <div class="swiper-button-prev swip-btn-prev static m-0 text-white outline-none"></div>
+                        <div class="swiper-pagination static max-w-max mx-2 first-bullet"></div>
+                        <div class="swiper-button-next swip-btn-next static m-0 text-white text-sm outline-none"></div>
+                    </div>
+                </div>
+                
+                <input type="checkbox" class="hidden" id="callback-form">
+                <label class="cursor-pointer absolute -right-1 text-sm w-1/3 rounded-md p-2 top-1/2 flex bg-green text-center transition-all cheked sm:hidden duration-500" for="callback-form">Закажите обратный звонок</label>
+                <label class="fixed right-full h-full w-full closearea opacity-0 bg-opacity-70 bg-black" for="callback-form"></label>
+                
+                <div class="xl:min-w-max xl:items-start xl:self-end lg:mr-0 absolute lg:static lg:transform-none mx-auto my-20 2xl:my-36 -left-full right-full sm:inset-x-0 md:min-w-auto shadow flex flex-col p-6 rounded-md items-center max-w-full callback-form transition-all duration-500 bg-green">
+                    <label class="lg:hidden absolute h-1/4 top-0 w-full cursor-pointer" for="callback-form"></label>
+                    <p class="font-bold mb-2 text-base text-center sm:min-w-max">Закажите обратный звонок</p>
+                    <p class="text-sm mb-2">Укажите номер телефона</p>
+                    <form class="flex flex-col xl:flex-row items-center" action="">
+                        <input placeholder="+7(___)___-__-__" name="entry.1162737436" class="h-10 xl:h-14 xl:rounded-tr-none xl:rounded-br-none w-full mb-4 rounded-md px-2 xl:my-0 xl:min-w-max" type="tel" value="" required> 
+                        <button class="btn btn-border min-w-full sm:min-w-max xl:hover:scale-95 btn-border-cb xl:self-stretch xl:py-3 focus:outline-none" type="submit">Отправить</button>
+                    </form>
+                    
+                </div>
+            </div>
+            <div class="absolute inset-0 z-0">
+                <div class="swiper-container swiper2 h-full w-full">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide bg-cover bg-center lg:bg-left-bottom swiper-lazy" data-background="/img/first-bg.jpg">
+                            <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="swiper-slide bg-cover bg-center lg:bg-left-bottom swiper-lazy" data-background="https://c.pxhere.com/photos/68/3d/wall_furniture_design_apartment_room_interior_design_decoration-945400.jpg!d">
+                            <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="swiper-slide bg-cover bg-center lg:bg-left-bottom swiper-lazy" data-background="https://c.pxhere.com/photos/9c/b6/wall_bed_apartment_room_interior_design_decoration_design-945393.jpg!d">
+                            <div class="swiper-lazy-preloader"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-white wrapper-px-0 text-black overflow-hidden xl:overflow-visible min-h-full">
+            <div class="container mx-auto py-6 px-4 grid grid-cols-1 sm:grid-cols-2 gap-2 xl:grid-cols-3 ">
+                <div class="w-full md:col-span-2 lg:col-span-1 xl:row-span-2 xl:sticky top-32 h-max">
+                    <div class="flex items-center fs-30 fw-800 text-green name mb-4 w-full">
+                        <div class="mr-2 h-1 bg-green rounded-full flex-grow w-auto"></div><p class="flex-grow">ЧТО МЫ ДЕЛАЕМ?</p>
+                    </div>
+                    <div class="mb-4 md:mx-auto lg:ml-auto md:w-4/5 xl:w-full">
+                        <h2 class="font-bold text-3xl mb-5">Производим на заказ корпусную <span class="text-green">мебель</span> для помещений</h2>
+                        <div class="text-base space-y-2">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis et commodi, soluta sed expedita ullam dolorum modi, asperiores mollitia aliquid rem error? Sint quia rem perspiciatis provident laudantium consequuntur quo?
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere qui eligendi libero atque accusantium vitae quos molestias quis aperiam laboriosam placeat soluta sequi obcaecati debitis, deleniti perspiciatis molestiae nam voluptate!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="name flex items-center mb-4 w-full">
+                        <div class="bg-purple-500 h-1 rounded-full flex-grow"></div>
+                    </div>
+                </div>
+                <div class="w-full max-w-full my-auto mx-auto card md:col-span-2 lg:col-span-1 xl:col-span-2 bg-dark rounded-md flex flex-col md:flex-row lg:flex-col lg:w-max justify-center px-6 py-8 space-y-6 md:space-y-0 md:justify-between lg:space-y-8 text-white xl:flex-row xl:space-y-0 xl:order-3">
+                    <div class="flex flex-row space-x-2">
+                        <div class="h-16 w-16 bg-no-repeat bg-contain bg-center b-lazy" data-src="/img/svg/1000clients.svg"></div>
+                        <div class="w-max flex flex-col justify-center">
+                            <p class="font-bold text-lg lg:text-xl">1000+</p>
+                            <p class="text-base lg:text-lg font-normal">Клиентов</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-row space-x-2">
+                        <div class="h-16 w-16 bg-no-repeat bg-contain bg-center b-lazy" data-src="/img/svg/star.svg"></div>
+                        <div class="w-max flex flex-col justify-center">
+                            <p class="font-bold text-lg lg:text-xl">Лучшие</p>
+                            <p class="text-base lg:text-lg font-normal">среди конкурентов</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-row space-x-2">
+                        <div class="h-16 w-16 bg-no-repeat bg-contain bg-center b-lazy" data-src="/img/svg/certificate.svg"></div>
+                        <div class="w-max flex flex-col justify-center">
+                            <p class="font-bold text-lg lg:text-xl">Профессионалы</p>
+                            <p class="text-base lg:text-lg font-normal">в своем деле</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="second-slide" class="swiper-container slide-punkts overflow-visible xl:overflow-hidden  xl:right-0 top-0 xl:-top-10 sm:col-span-2 xl:col-span-2 w-full opacity-0 transition-opacity">
+                        <div class="swiper-wrapper h-full text-white">
+                            <div class="swiper-slide p-2">
+                                <a href="#!" class="relative flex h-full justify-start items-end bg-cover bg-no-repeat bg-center p-2 gallery-cards swiper-lazy" data-background="/img/shkaf.jpg">
+                                    <p class="text-3xl text-shadow-2xl z-1">Шкафы</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide p-2"><a href="#!" class="relative flex h-full justify-start items-end bg-cover bg-no-repeat bg-center p-2 gallery-cards swiper-lazy" data-background="/img/kuhnya.jpg"><p class="text-3xl text-shadow-2xl z-1">Кухонный гарнитур</p></a></div>
+                            <div class="swiper-slide p-2"><a href="#!" class="relative flex h-full justify-start items-end bg-cover bg-no-repeat bg-center p-2 gallery-cards swiper-lazy" data-background="/img/spalnya.jpg"><p class="text-3xl text-shadow-2xl z-1">Мебель для спальни</p></a></div>
+                            <div class="swiper-slide p-2"><a href="#!" class="relative flex h-full justify-start items-end bg-cover bg-no-repeat bg-center p-2 gallery-cards swiper-lazy" data-background="/img/spalnya.jpg"><p class="text-3xl text-shadow-2xl z-1">Мебель для спальни</p></a></div>
+                        </div> 
+                        <div class="swiper-button-prev outline-none theme-color-green text-shadow-2xl sha-gal text-gal"></div>
+                        <div class="swiper-pagination theme-color-green gallery-bullets sha-gal"></div>
+                        <div class="swiper-button-next outline-none theme-color-green text-shadow-2xl sha-gal text-gal"></div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-cover bg-center h-auto relative z-0 wrapper-px-0 py-8 b-lazy" data-src="/img/bg-preim.jpg">
+            <div>
+                <div class="container mx-auto px-4 flex items-center form__margin fs-30 fw-800 name">
+                    <div class="mr-2 h-1 max-w bg-white rounded-full flex-grow w-auto"></div><p class="flex-grow">ПРЕИМУЩЕСТВА</p> 
+                </div>
+            </div>
+            <div class="container px-4 mx-auto flex flex-row flex-wrap items-start justify-evenly">
+                <div class="w-1/2 md:w-2/6 xl:w-1/5">
+                    <div class="flex flex-grow flex-col items-center p-4 max-w-min m-auto">
+                        <div class="h-14 sm:h-20 w-14 sm:w-20 bg-contain bg-no-repeat bg-center b-lazy" data-src="/img/svg/wifi.svg"></div>
+                        <p class="text-sm sm:text-lg text-center">ОНЛАЙН ВСТРЕЧА</p>
+                    </div>
+                </div>
+                <div class="w-1/2 md:w-2/6 xl:w-1/5">
+                    <div class="flex flex-grow flex-col items-center p-4 max-w-min m-auto">
+                        <div class="h-14 sm:h-20 w-14 sm:w-20 bg-contain bg-no-repeat bg-center b-lazy" data-src="/img/svg/cargo.svg"></div>
+                        <p class="text-sm sm:text-lg text-center">БЕСПЛАТНАЯ ДОСТАВКА</p>
+                    </div>
+                </div>
+                <div class="w-1/2 md:w-2/6 xl:w-1/5">
+                    <div class="flex flex-grow flex-col items-center p-4 max-w-min m-auto">
+                        <div class="h-14 sm:h-20 w-14 sm:w-20 bg-contain bg-no-repeat bg-center b-lazy" data-src="/img/svg/discount.svg"></div>
+                        <p class="text-sm sm:text-lg text-center">ДЕЙСТВУЮЩИЕ СКИДКИ</p>
+                    </div>
+                </div>
+                <div class="w-1/2 md:w-2/6 xl:w-1/5">
+                    <div class="flex flex-grow flex-col items-center p-4 max-w-min m-auto">
+                        <div class="h-14 sm:h-20 w-14 sm:w-20 bg-contain bg-no-repeat bg-center b-lazy" data-src="/img/svg/guarantee.svg"></div>
+                        <p class="text-sm sm:text-lg text-center">ГАРАНТИЯ ДО 3 ЛЕТ</p>
+                    </div>
+                </div>
+                <div class="w-1/2 md:w-2/6 xl:w-1/5">
+                    <div class="flex flex-grow flex-col items-center p-4 max-w-min m-auto">
+                        <div class="h-14 sm:h-20 w-14 sm:w-20 bg-contain bg-no-repeat bg-center b-lazy" data-src="/img/svg/partners.svg"></div>
+                        <p class="text-sm sm:text-lg text-center">ПАРТНЁРСТВО</p>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bg-green bg-opacity-70 inset-0 -z-1"></div>
+        </section>
+        <section class="bg-white bg-center bg-cover bg-no-repeat py-8 overflow-hidden wrapper-px-0 b-lazy" data-src="/img/portfolio.png">
+            <div class="container mx-auto h-auto" >
+                <div class="px-4 flex items-center fs-30 fw-800 text-green name mb-4 w-full">
+                    <div class="mr-2 h-1 bg-green rounded-full flex-grow w-auto"></div><p class="flex-grow">ПОРТФОЛИО</p>
+                </div>
+            
+                <div class="portfolio swiper-container overflow-visible">
+                    <div class="swiper-wrapper text-black">
+                        <div class="swiper-slide flex flex-col justify-center items-center">
+                            <a href="#!" class="flex justify-center items-end bg-cover bg-no-repeat bg-center swiper-lazy" data-background="/img/spalnya.jpg" data-swiper-parallax-opacity="0.5">
+                                
+                            </a>
+                            <p class="text-lg sm:text-3xl mt-2 z-1 font-extrabold" data-swiper-parallax-opacity="0">Мебель для спальни</p>
+                        </div>
+                        <div class="swiper-slide flex flex-col justify-center items-center">
+                            <a href="#!" class="flex justify-center items-end bg-cover bg-no-repeat bg-center swiper-lazy" data-background="/img/spalnya.jpg" data-swiper-parallax-opacity="0.5">
+                                
+                            </a>
+                            <p class="text-lg sm:text-3xl mt-2 z-1 font-extrabold" data-swiper-parallax-opacity="0">Мебель для спальни</p>
+                        </div>
+                        <div class="swiper-slide flex flex-col justify-center items-center">
+                            <a href="#!" class="flex justify-center items-end bg-cover bg-no-repeat bg-center swiper-lazy" data-background="/img/spalnya.jpg" data-swiper-parallax-opacity="0.5">
+                                
+                            </a>
+                            <p class="text-lg sm:text-3xl mt-2 z-1 font-extrabold" data-swiper-parallax-opacity="0">Мебель для спальни</p>
+                        </div>
+                        <div class="swiper-slide flex flex-col justify-center items-center">
+                            <a href="#!" class="flex justify-center items-end bg-cover bg-no-repeat bg-center swiper-lazy" data-background="/img/spalnya.jpg" data-swiper-parallax-opacity="0.5">
+                                
+                            </a>
+                            <p class="text-lg sm:text-3xl mt-2 z-1 font-extrabold" data-swiper-parallax-opacity="0">Мебель для спальни</p>
+                        </div>
+                        <div class="swiper-slide flex flex-col justify-center items-center">
+                            <a href="#!" class="flex justify-center items-end bg-cover bg-no-repeat bg-center swiper-lazy" data-background="/img/spalnya.jpg" data-swiper-parallax-opacity="0.5">
+                                
+                            </a>
+                            <p class="text-lg sm:text-3xl mt-2 z-1 font-extrabold" data-swiper-parallax-opacity="0">Мебель для спальни</p>
+                        </div>
+                        <div class="swiper-slide flex flex-col justify-center items-center">
+                            <a href="#!" class="flex justify-center items-end bg-cover bg-no-repeat bg-center swiper-lazy" data-background="/img/spalnya.jpg" data-swiper-parallax-opacity="0.5">
+                                
+                            </a>
+                            <p class="text-lg sm:text-3xl mt-2 z-1 font-extrabold" data-swiper-parallax-opacity="0">Мебель для спальни</p>
+                        </div>
+                        <div class="swiper-slide flex flex-col justify-center items-center">
+                            <a href="#!" class="flex justify-center items-end bg-cover bg-no-repeat bg-center swiper-lazy" data-background="/img/spalnya.jpg" data-swiper-parallax-opacity="0.5">
+                                
+                            </a>
+                            <p class="text-lg sm:text-3xl mt-2 z-1 font-extrabold" data-swiper-parallax-opacity="0">Мебель для спальни</p>
+                        </div>
+                        <div class="swiper-slide flex flex-col justify-center items-center">
+                            <a href="#!" class="flex justify-center items-end bg-cover bg-no-repeat bg-center swiper-lazy" data-background="/img/spalnya.jpg" data-swiper-parallax-opacity="0.5">
+                                
+                            </a>
+                            <p class="text-lg sm:text-3xl mt-2 z-1 font-extrabold" data-swiper-parallax-opacity="0">Мебель для спальни</p>
+                        </div>
+                        <div class="swiper-slide flex flex-col justify-center items-center">
+                            <a href="#!" class="flex justify-center items-end bg-cover bg-no-repeat bg-center swiper-lazy" data-background="/img/spalnya.jpg" data-swiper-parallax-opacity="0.5">
+                                
+                            </a>
+                            <p class="text-lg sm:text-3xl mt-2 z-1 font-extrabold" data-swiper-parallax-opacity="0">Мебель для спальни</p>
+                        </div>
+                        <div class="swiper-slide flex flex-col justify-center items-center">
+                            <a href="#!" class="flex justify-center items-end bg-cover bg-no-repeat bg-center swiper-lazy" data-background="/img/spalnya.jpg" data-swiper-parallax-opacity="0.5">
+                                
+                            </a>
+                            <p class="text-lg sm:text-3xl mt-2 z-1 font-extrabold" data-swiper-parallax-opacity="0">Мебель для спальни</p>
+                        </div>
+                        <div class="swiper-slide flex flex-col justify-center items-center">
+                            <a href="#!" class="flex justify-center items-end bg-cover bg-no-repeat bg-center swiper-lazy" data-background="/img/spalnya.jpg" data-swiper-parallax-opacity="0.5">
+                                
+                            </a>
+                            <p class="text-lg sm:text-3xl mt-2 z-1 font-extrabold" data-swiper-parallax-opacity="0">Мебель для спальни</p>
+                        </div>
+                        <div class="swiper-slide flex flex-col justify-center items-center">
+                            <a href="#!" class="flex justify-center items-end bg-cover bg-no-repeat bg-center swiper-lazy" data-background="/img/spalnya.jpg" data-swiper-parallax-opacity="0.5">
+                                
+                            </a>
+                            <p class="text-lg sm:text-3xl mt-2 z-1 font-extrabold" data-swiper-parallax-opacity="0">Мебель для спальни</p>
+                        </div>
+                        <div class="swiper-slide flex flex-col justify-center items-center">
+                            <a href="#!" class="flex justify-center items-end bg-cover bg-no-repeat bg-center swiper-lazy" data-background="/img/spalnya.jpg" data-swiper-parallax-opacity="0.5">
+                                
+                            </a>
+                            <p class="text-lg sm:text-3xl mt-2 z-1 font-extrabold" data-swiper-parallax-opacity="0">Мебель для спальни</p>
+                        </div>
+                        <div class="swiper-slide flex flex-col justify-center items-center">
+                            <a href="#!" class="flex justify-center items-end bg-cover bg-no-repeat bg-center swiper-lazy" data-background="/img/spalnya.jpg" data-swiper-parallax-opacity="0.5">
+                                
+                            </a>
+                            <p class="text-lg sm:text-3xl mt-2 z-1 font-extrabold" data-swiper-parallax-opacity="0">Мебель для спальни</p>
+                        </div>
+                        <div class="swiper-slide flex flex-col justify-center items-center">
+                            <a href="#!" class="flex justify-center items-end bg-cover bg-no-repeat bg-center swiper-lazy" data-background="/img/spalnya.jpg" data-swiper-parallax-opacity="0.5">
+                                
+                            </a>
+                            <p class="text-lg sm:text-3xl mt-2 z-1 font-extrabold" data-swiper-parallax-opacity="0">Мебель для спальни</p>
+                        </div>
+                        <div class="swiper-slide flex flex-col justify-center items-center">
+                            <a href="#!" class="flex justify-center items-end bg-cover bg-no-repeat bg-center swiper-lazy" data-background="/img/spalnya.jpg" data-swiper-parallax-opacity="0.5">
+                                
+                            </a>
+                            <p class="text-lg sm:text-3xl mt-2 z-1 font-extrabold" data-swiper-parallax-opacity="0">Мебель для спальни</p>
+                        </div>
+                        <div class="swiper-slide flex flex-col justify-center items-center">
+                            <a href="#!" class="flex justify-center items-end bg-cover bg-no-repeat bg-center swiper-lazy" data-background="/img/spalnya.jpg" data-swiper-parallax-opacity="0.5">
+                                
+                            </a>
+                            <p class="text-lg sm:text-3xl mt-2 z-1 font-extrabold" data-swiper-parallax-opacity="0">Мебель для спальни</p>
+                        </div>
+                    </div>
+                    <div class="swiper-scrollbar static mt-2 mx-auto"></div> 
+                </div>   
+                </div>
             
         </section>
-        <section class="form__section bg-cover h-auto" style="background-image: url(../img/formbg.jpg);">
-            <div class="cover-green w-full min-h-screen-header">
-                <div class="wrapper-0 flex flex-col justify-evenly form__padding min-h-inerit">
-                    <div class="flex items-center form__margin name fs-30 fw-800">
-                        <div class="bg-white"></div><p>ЗАЯВКА</p> 
+        <section class="form__section bg-cover h-auto b-lazy" data-src="/img/formbg.jpg">
+            <div class="bg-green bg-opacity-70 w-full min-h-screen-header wrapper-px-0">
+                <div class="flex flex-col justify-evenly py-8 min-h-inerit">
+                    <div class="container mx-auto px-4 flex items-center form__margin fs-30 fw-800 name">
+                        <div class="mr-2 h-1 max-w bg-white rounded-full flex-grow w-auto"></div><p class="flex-grow">ЗАЯВКА</p> 
                     </div>
-                    <div class="flex items-center justify-around flex-wrap-reverse">
+                    <div class="container mx-auto flex items-center justify-around flex-wrap-reverse">
                         <div class="numbers flex-col flex items-center w-full">
                             <p class="fs-30">Позвоните нам</p>
                             <a href="tel:+79614300703" class="icon__number flex items-center"><div class="call__img bg-contain bg-center bg-no-repeat"></div>
@@ -89,8 +360,8 @@
                             
                             
                         </div>
-                        <div class="form__block flex items-center justify-center flex-col text-center bg-white text-black">
-                            <p class="fs-30">Оставьте заявку</p>
+                        <div class="form__block relative flex items-center justify-center flex-col text-center bg-white text-black">
+                            <p class="fs-30 mt-0">Оставьте заявку</p>
                             <p class="fs-18">После отправки в течении короткого времени наш оператор свяжется с Вами!</p>
                             <script>var submitted=false;</script>
                             <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)
@@ -109,7 +380,7 @@
                                     <label class="fs-22 mr-auto">E-mail</label>
                                     <input placeholder="Введите E-mail" name="entry.923070370" class="input__area" type="email">
                                     <input class="refclass" type="hidden" name="entry.2139073903">
-                                    <input class="btn bg-orange text-white g-recaptcha" type="submit" data-sitekey="6LceiPAZAAAAAHYFGwOu4JwbRdorskL6GsUcMBE7" data-callback="onSubmit" data-action="submit" value="Оставить заявку">
+                                    <input class="btn bg-orange text-white g-recaptcha cursor-pointer" type="submit" data-sitekey="6LceiPAZAAAAAHYFGwOu4JwbRdorskL6GsUcMBE7" data-callback="onSubmit" data-action="submit" value="Оставить заявку">
                                 </form>
                             
                         </div>
@@ -119,10 +390,53 @@
         </section>
     </main>
     <footer class="footer bg-dark">
-
+        <div class="flex flex-col relative">
+            <input type="radio" class="hidden" name="footer-menu" id="footer-col-hide" checked>
+            <input type="radio" class="hidden" name="footer-menu" id="footer-col-1">
+            <div class="flex flex-col items-center">
+                <div class="flex justify-center py-4">
+                    <div class="relative pr-6 w-max">
+                        <p>Разделы</p>
+                        <div class="absolute inset-0">
+                            <label for="footer-col-1" class="cursor-pointer h-full w-full flex justify-end items-center gal-x">
+                                <div class="h-full w-5 flex justify-between transform translate-y-2 transition-transform duration-300">
+                                    <span class="bg-white origin-top transform h-1/2 -rotate-45 transition-all duration-300 rounded"></span>
+                                    <span class="bg-white origin-top transform h-1/2 rotate-45 transition-all duration-300 rounded"></span>
+                                </div>
+                            </label>
+                            <label for="footer-col-hide" class="cursor-pointer invisible h-full w-full top-0 absolute"></label>
+                        </div>
+                    </div>
+                </div>
+                <ul class="flex flex-col items-center py-0 max-h-0 overflow-hidden bg-dark-2 transition-all wrapper-px w-full space-y-2 duration-300">
+                    <li>Главная</li>
+                    <li>Услуги</li>
+                    <li>Преимущество</li>
+                    <li>Заявка</li>
+                    <li>Контакты</li>
+                    <li>Портфолио</li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="space-y-6 container wrapper-px mx-auto">
+            <div class="flex flex-row justify-center text-lg">
+                <div data-src="/img/svg/copyr.svg" class="bg-no-repeat bg-contain h-6 w-6 b-lazy mr-2"></div>
+                <p>Mebelbliss 2020</p>
+            </div>
+            <div class="flex flex-col items-center text-center text-sm font-normal">
+                <p>Все права защищены</p>
+                <div class="w-4/5 h-px bg-white bg-opacity-50 "></div>
+                <a href="#!">Политика конфиденциальности</a>
+            </div>
+        </div>
     </footer>
+
 <script defer src="https://www.google.com/recaptcha/api.js"></script>
-<script defer src="/js/script.js"></script>  
+<script defer src="/js/script.js"></script>
+<script defer src="/js/swiper.js"></script> 
 <noscript><div><img src="https://mc.yandex.ru/watch/69462745" style="position:absolute; left:-9999px;" alt="Metrika" /></div></noscript>
+
+
 </body>
 </html>

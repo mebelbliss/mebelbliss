@@ -1,10 +1,13 @@
 :root{
     --dark:#323232;
+    --dark-2:#262626;
     --adaptive:* ((100vw - 320px) / (1920 - 320));
     --green:rgb(39, 174, 96);
-    --greenop:rgb(39 174 96 / 80%);
 }
 ::-webkit-scrollbar-button{background-image:url('');background-repeat:no-repeat;width:5px;height:0}::-webkit-scrollbar-track{background-color:var(--dark)}::-webkit-scrollbar-thumb{-webkit-border-radius:0;border-radius:0;background:var(--green)}::-webkit-scrollbar-thumb:hover{background:linear-gradient(180deg,var(--dark) 0,var(--green) 100%)}::-webkit-resizer{background-image:url('');background-repeat:no-repeat;width:4px;height:0}::-webkit-scrollbar{width:6px;height:6px}
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
@@ -17,9 +20,29 @@ body{
 input:focus{
     outline:none;
 }
-.btn{
-    border-radius: 5px;
-    padding: 16px 44px;
+.b-lazy,.swiper-lazy {
+    transition: opacity 500ms ease-in-out;
+    opacity: 0;
+}
+.b-lazy.b-loaded,.swiper-lazy.swiper-lazy-loaded {
+    opacity: 1;
+}
+.text-green{
+    color:var(--green);
+}
+.bg-green{
+    --tw-bg-opacity:1;
+    background-color: rgba(39, 174, 96,var(--tw-bg-opacity));
+}
+.text-shadow-2xl{
+    text-shadow: 0 0 1rem black;
+} 
+.text-shadow-5xl{
+    text-shadow: 0 0 3rem black;
+}
+.swiper-container{
+    @apply mx-auto relative overflow-hidden list-none p-0;
+    z-index: 1;
 }
 .fw-800{
     font-weight: 800;
@@ -48,6 +71,9 @@ input:focus{
 .bg-dark{
     background: var(--dark);
 }
+.bg-dark-2{
+    background: var(--dark-2);
+}
 .bg-orange{
     background-color: #F2994A;
 }
@@ -56,19 +82,33 @@ input:focus{
     margin:0 auto;
     padding:0 calc(20px + 30 var(--adaptive));
 }
+.wrapper-px{
+    padding-left: calc(20px + 30 var(--adaptive));
+    padding-right: calc(20px + 30 var(--adaptive));
+}
+.wrapper-px-0{
+    padding-left: calc(0px + 50 var(--adaptive));
+    padding-right: calc(0px + 50 var(--adaptive));
+}
 .wrapper-0{
     max-width: 1620px;
     margin:0 auto;
     padding:0 calc(0px + 50 var(--adaptive));
 }
+.z-1{
+    z-index: 1;
+}
+.-z-1{
+    z-index: -1;
+}
 .min-h-inerit{
     min-height: inherit;
 }
-.cover-green{
-    background-color: var(--greenop);
-}
 .min-h-screen-header{
     min-height: calc(100vh - (80px + 10 var(--adaptive)));
+}
+.h-max{
+    height: max-content;
 }
 .input__area{
     background: #FFFFFF;
