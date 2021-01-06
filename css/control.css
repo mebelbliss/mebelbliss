@@ -57,9 +57,9 @@
 #footer-col-3:checked ~ div:nth-child(7) > div > div > div > label:nth-child(2) {
   visibility: visible
 }
-#footer-col-1:checked ~ div:nth-child(3) > ul,
-#footer-col-2:checked ~ div:nth-child(5) > ul,
-#footer-col-3:checked ~ div:nth-child(7) > ul {
+#footer-col-1:checked ~ div:nth-child(3) > :nth-child(2),
+#footer-col-2:checked ~ div:nth-child(5) > :nth-child(2),
+#footer-col-3:checked ~ div:nth-child(7) > :nth-child(2) {
   max-height: 100vh;
   padding-top: 1rem;
   padding-bottom: 1rem

@@ -103,10 +103,10 @@ input:focus {
   font-size: 0
 }
 .bg-dark {
-  background: var(--dark)
+  background-color: var(--dark)
 }
 .bg-dark-2 {
-  background: var(--dark-2)
+  background-color: var(--dark-2)
 }
 .bg-orange {
   background-color: #f2994a

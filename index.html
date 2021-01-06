@@ -7,7 +7,7 @@
     <meta name="description" content="Изготовим корпусную мебель на заказ в Ростове-на-Дону, быстро качественно и с удовольствием | MebelBliss">
     <link rel="canonical" href="https://mebelbliss.ru"/>
     <link rel="shortcut icon" href="/img/svg/logo1.svg" type="image/svg+xm">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="preload" href="/img/first-bg.jpg" as="img">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -29,16 +29,13 @@
                             <a href="#!" class="list__link py-3 px-5 md:px-2 lg:px-5 xl:px-4 menu__item"><p class="active__item inactive__item relative">Главная</p></a>
                         </li>
                         <li class="m-auto fw-400">
-                            <a href="#!" class="list__link py-3 px-5 md:px-2 lg:px-5 xl:px-4 menu__item"><p class="inactive__item relative">Услуги</p></a>
-                        </li>
-                        <li class="m-auto fw-400">
                             <a href="#!" class="list__link py-3 px-5 md:px-2 lg:px-5 xl:px-4 menu__item"><p class="inactive__item relative">Преимущества</p></a>
                         </li>
                         <li class="m-auto fw-400">
                             <a href="#!" class="list__link py-3 px-5 md:px-2 lg:px-5 xl:px-4 menu__item"><p class="inactive__item relative">Портфолио</p></a>
                         </li>
                         <li class="m-auto fw-400">
-                            <a href="#form" class="list__link py-3 px-5 md:px-2 lg:px-5 xl:px-4 menu__item"><p class="inactive__item relative">Заявка</p></a>
+                            <a href="/#call__back" class="list__link py-3 px-5 md:px-2 lg:px-5 xl:px-4 menu__item"><p class="inactive__item relative">Обратный звонок</p></a>
                         </li>
                     </ul>
                 </nav>
@@ -73,9 +70,9 @@
     </header>
     <div id="header-pod" class="header-pod"></div>
     <main class="main">
-        <section class="min-h-screen-header first-slide relative flex items-center justify-center z-1 overflow-hidden bg-black">
+        <section class="min-h-screen-header first-slide relative flex items-center justify-center z-1 overflow-hidden bg-black bg-cover bg-center lg:bg-left-bottom" style="background-image: url(/img/first-bg.jpg);">
             <div class="wrapper flex flex-col sm:flex-row absolute inset-0 items-center justify-between overflow-hidden xl:items-start z-1">
-                <div class="flex flex-col items-center justify-between md:justify-evenly pb-3 pt-12 w-full h-full lg:w-1/2 xl:w-2/5 lg:items-start ">
+                <div class="flex flex-col items-center justify-around md:justify-evenly pb-3 pt-12 w-full h-full lg:w-1/2 xl:w-2/5 lg:items-start ">
                     <div class="flex flex-col items-start font-bold relative first_line lg:ml-2">
                         <p class="text-4xl sm:text-5xl text-shadow-2xl">КОРПУСНАЯ</p>
                         <p class="text-6xl sm:text-7xl text-green text-shadow-2xl">МЕБЕЛЬ</p>
@@ -99,7 +96,7 @@
                 </div>
                 
                 <input type="checkbox" class="hidden" id="callback-form">
-                <label class="cursor-pointer absolute -right-1 text-sm w-1/3 rounded-md p-2 top-1/2 flex bg-green text-center transition-all cheked sm:hidden duration-500" for="callback-form">Закажите обратный звонок</label>
+                <label class="cursor-pointer absolute -right-1 text-sm w-1/3 rounded-md p-2 flex bg-green text-center transition-all cheked sm:hidden duration-500" for="callback-form" style="top:40%">Закажите обратный звонок</label>
                 <label class="fixed right-full h-full w-full closearea opacity-0 bg-opacity-70 bg-black" for="callback-form"></label>
                 
                 <div class="xl:min-w-max xl:items-start xl:self-end lg:mr-0 absolute lg:static lg:transform-none mx-auto my-20 2xl:my-36 -left-full right-full sm:inset-x-0 md:min-w-auto shadow flex flex-col p-6 rounded-md items-center max-w-full callback-form transition-all duration-500 bg-green">
@@ -190,6 +187,7 @@
                 </div>
             </div>
         </section>
+        <div id="preimushchestva"></div>
         <section class="bg-cover bg-center h-auto relative z-0 wrapper-px-0 py-8 b-lazy" data-src="/img/bg-preim.jpg">
             <div>
                 <div class="container mx-auto px-4 flex items-center form__margin fs-30 fw-800 name">
@@ -346,6 +344,7 @@
                 </div>
             
         </section>
+        <div id="call__back"></div>
         <section class="form__section bg-cover h-auto b-lazy" data-src="/img/formbg.jpg">
             <div class="bg-green bg-opacity-70 w-full min-h-screen-header wrapper-px-0">
                 <div class="flex flex-col justify-evenly py-8 min-h-inerit">
@@ -389,15 +388,21 @@
             </div>
         </section>
     </main>
-    <footer class="footer bg-dark">
-        <div class="flex flex-col relative">
+<footer class="footer bg-dark">
+    <div class="container mx-auto py-4 sm:wrapper-px-0 sm:flex sm:flex-wrap justify-between">
+        <div class="socicon flex sm:flex-col order-2 justify-evenly sm:w-1/5 sm:items-center lg:w-1/12">
+            <a href="https://wa.me/79614300703" rel="nofollow" target="_blank" class="h-11 w-11 b-lazy fs-0 bg-no-repeat bg-center bg-contain hover:opacity-50 duration-300 transition-opacity" data-src="/img/svg/wa.svg">WhatsApp</a>
+            <a href="https://www.instagram.com/mebelbliss_/" rel="nofollow" target="_blank" class="h-11 w-11 fs-0 b-lazy bg-no-repeat bg-center bg-contain hover:opacity-50 duration-300 transition-opacity" data-src="/img/svg/inst.svg">Instagram</a>
+            <a href="#!" rel="nofollow" target="_blank" class="h-11 w-11 fs-0 b-lazy bg-no-repeat bg-center bg-contain hover:opacity-50 duration-300 transition-opacity" data-src="/img/svg/vk.svg">VK</a>
+        </div>
+        <div class="flex flex-col relative sm:flex-row justify-between  sm:flex-wrap sm:w-4/5 lg:w-11/12">
             <input type="radio" class="hidden" name="footer-menu" id="footer-col-hide" checked>
             <input type="radio" class="hidden" name="footer-menu" id="footer-col-1">
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center sm:items-start sm:m-2">
                 <div class="flex justify-center py-4">
-                    <div class="relative pr-6 w-max">
+                    <div class="relative pr-6 sm:pr-0 sm w-max hover:opacity-50 duration-300 transition-opacity">
                         <p>Разделы</p>
-                        <div class="absolute inset-0">
+                        <div class="absolute inset-0 sm:hidden">
                             <label for="footer-col-1" class="cursor-pointer h-full w-full flex justify-end items-center gal-x">
                                 <div class="h-full w-5 flex justify-between transform translate-y-2 transition-transform duration-300">
                                     <span class="bg-white origin-top transform h-1/2 -rotate-45 transition-all duration-300 rounded"></span>
@@ -408,30 +413,73 @@
                         </div>
                     </div>
                 </div>
-                <ul class="flex flex-col items-center py-0 max-h-0 overflow-hidden bg-dark-2 transition-all wrapper-px w-full space-y-2 duration-300">
-                    <li>Главная</li>
-                    <li>Услуги</li>
-                    <li>Преимущество</li>
-                    <li>Заявка</li>
-                    <li>Контакты</li>
-                    <li>Портфолио</li>
+                <ul class="flex flex-col items-center py-0 max-h-0 overflow-hidden bg-dark-2 transition-all wrapper-px w-full space-y-2 duration-300 sm:items-start sm:max-h-full sm:bg-dark sm:px-0">
+                    <li class="hover:opacity-50 duration-300 transition-opacity"><a href="/">Главная</a></li>
+                    <li class="hover:opacity-50 duration-300 transition-opacity"><a href="/#preimushchestva">Преимущества</a></li>
+                    <li class="hover:opacity-50 duration-300 transition-opacity"><a href="/#call__back">Обратный звонок</a></li>
+                    <li class="hover:opacity-50 duration-300 transition-opacity"><a href="/portfolio">Портфолио</a></li>
                 </ul>
             </div>
-            
+            <input type="radio" class="hidden" name="footer-menu" id="footer-col-2">
+            <div class="flex flex-col items-center sm:items-start sm:m-2">
+                <div class="flex justify-center py-4">
+                    <div class="relative pr-6 sm:pr-0 w-max hover:opacity-50 duration-300 transition-opacity">
+                        <p>Адрес</p>
+                        <div class="absolute inset-0  sm:hidden">
+                            <label for="footer-col-2" class="cursor-pointer h-full w-full flex justify-end items-center gal-x">
+                                <div class="h-full w-5 flex justify-between transform translate-y-2 transition-transform duration-300">
+                                    <span class="bg-white origin-top transform h-1/2 -rotate-45 transition-all duration-300 rounded"></span>
+                                    <span class="bg-white origin-top transform h-1/2 rotate-45 transition-all duration-300 rounded"></span>
+                                </div>
+                            </label>
+                            <label for="footer-col-hide" class="cursor-pointer invisible h-full w-full top-0 absolute"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center py-0 max-h-0 overflow-hidden bg-dark-2 transition-all wrapper-px w-full space-y-2 duration-300 sm:items-start sm:max-h-full sm:bg-dark sm:px-0">
+                   <p>Россия<br>
+                    г.Ростов-на-Дону<br>
+                    ул.Казахская 78/5<br>
+                    цех "Mebelbliss"<br>
+                   </p> 
+
+                </div>
+            </div>
+            <input type="radio" class="hidden" name="footer-menu" id="footer-col-3">
+            <div class="flex flex-col items-center sm:items-start sm:m-2">
+                <div class="flex justify-center py-4">
+                    <div class="relative pr-6 sm:pr-0 w-max hover:opacity-50 duration-300 transition-opacity">
+                        <p>Контакты</p>
+                        <div class="absolute inset-0 sm:hidden">
+                            <label for="footer-col-3" class="cursor-pointer h-full w-full flex justify-end items-center gal-x">
+                                <div class="h-full w-5 flex justify-between transform translate-y-2 transition-transform duration-300">
+                                    <span class="bg-white origin-top transform h-1/2 -rotate-45 transition-all duration-300 rounded"></span>
+                                    <span class="bg-white origin-top transform h-1/2 rotate-45 transition-all duration-300 rounded"></span>
+                                </div>
+                            </label>
+                            <label for="footer-col-hide" class="cursor-pointer invisible h-full w-full top-0 absolute"></label>
+                        </div>
+                    </div>
+                </div>
+                <ul class="flex flex-col items-center py-0 max-h-0 overflow-hidden bg-dark-2 transition-all wrapper-px w-full space-y-2 duration-300 sm:items-start sm:max-h-full sm:bg-dark sm:px-0">
+                    <li class="hover:opacity-50 duration-300 transition-opacity"><a href="tel:+79614300703">+7(961)430-07-03</a></li>
+                    <li class="hover:opacity-50 duration-300 transition-opacity"><a href="mailto:hello@mebelbliss.ru">hello@mebelbliss.ru</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="space-y-6 container wrapper-px mx-auto">
-            <div class="flex flex-row justify-center text-lg">
+        <div class="space-y-6 container wrapper-px mx-auto py-4 order-3 lg:flex lg:space-y-0 lg:justify-between lg:px-2">
+            <div class="flex flex-row justify-center text-lg lg:w-max ">
                 <div data-src="/img/svg/copyr.svg" class="bg-no-repeat bg-contain h-6 w-6 b-lazy mr-2"></div>
                 <p>Mebelbliss 2020</p>
             </div>
-            <div class="flex flex-col items-center text-center text-sm font-normal">
+            <div class="flex flex-col sm:flex-row sm:justify-evenly items-center text-center text-sm font-normal lg:space-x-2">
                 <p>Все права защищены</p>
-                <div class="w-4/5 h-px bg-white bg-opacity-50 "></div>
+                <div class="w-4/5 h-px sm:w-px sm:h-5 bg-white bg-opacity-50 my-1"></div>
                 <a href="#!">Политика конфиденциальности</a>
             </div>
         </div>
-    </footer>
-
+    </div>
+</footer>
 <script defer src="https://www.google.com/recaptcha/api.js"></script>
 <script defer src="/js/script.js"></script>
 <script defer src="/js/swiper.js"></script> 
