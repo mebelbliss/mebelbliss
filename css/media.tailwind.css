@@ -37,6 +37,11 @@
         padding-left: calc(0px + 50 var(--adaptive));
         padding-right: calc(0px + 50 var(--adaptive));
     }
+    .sm\:active__item::after{
+        width: 100%;
+        outline-offset: 0px;
+        outline: none;
+      }
 }
 @screen md{
     .menu__box {

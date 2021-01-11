@@ -44,6 +44,8 @@ var swiper4 = new Swiper('.portfolio', {
     preloadImages: false,
     lazy: {
     loadPrevNext: true,
+    loadPrevNextAmount: 1,
+    watchSlidesVisibility:true
     },
 effect: 'coverflow',
 grabCursor: true,

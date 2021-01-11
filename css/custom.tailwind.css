@@ -1,5 +1,5 @@
 .btn{
-  @apply flex flex-row rounded-md py-4 px-10 justify-center items-center transform transition-transform;
+  @apply flex flex-row rounded-md py-4 px-10 justify-center items-center transform transition-transform ;
   max-width: 212px;
   text-shadow: 0 0 1rem black;
 }
@@ -107,7 +107,7 @@
 .menu__item:hover > .inactive__item::after,
 .menu__item:active > .inactive__item::after,
 .active__item::after{
-  width: 42px;
+  width: 50px;
   outline-offset: 0px;
   outline: none;
 }
@@ -211,6 +211,12 @@
 .swip-btn-prev::after,.swip-btn-next::after{
   @apply font-extrabold text-xs;
 }
+#callbackform.send> input,#callbackform.send> button{
+  @apply opacity-0;
+}
+#callbackform.send> div{
+  @apply opacity-100 visible transition-opacity;
+}
 /*end first slide*/
 /*second slide*/
 .slide-punkts{
@@ -235,7 +241,7 @@
 }
 .gallery-cards{
   max-width: 328px;
-  @apply mx-auto
+  @apply mx-auto;
 }
 .gallery-bullets > span{
   box-shadow: var(--shadow-gallery);
@@ -265,31 +271,26 @@
   height:200%;
   background-color: var(--green);
 }
+.portfolio > .swiper-wrapper > .swiper-slide > .swiper-lazy > div{
+  background-image: url(/img/svg/logo2.svg);
+}
+.portfolio > .swiper-wrapper > .swiper-slide-active > .swiper-lazy.swiper-lazy-loaded > div,
+.portfolio > .swiper-wrapper > .swiper-slide-next > .swiper-lazy.swiper-lazy-loaded > div,
+.portfolio > .swiper-wrapper > .swiper-slide-prev > .swiper-lazy.swiper-lazy-loaded > div,
+.portfolio > .swiper-wrapper > .swiper-slide > .swiper-lazy.swiper-lazy-loaded > div{
+  @apply opacity-0;
+}
 /*second slide end*/
 .form{
-  opacity: 1;
-  transition: opacity 0.5s ease;
   max-width:350px;
 }
-.thanks{
-  position: absolute;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  z-index: -1;
-  transition: opacity 0.5s ease;
+#form.send > .thanks{
+  @apply opacity-100 visible transition-opacity;
 }
-.send > .thanks{
-  opacity: 1;
-  z-index: 0;
-}
-.send > input,.send > label{
-  opacity: 0;
+#form.send > input,
+#form.send > label,
+#form.send > button{
+  @apply opacity-0;
 }
 .form__margin{
   margin-bottom: calc(3vh + 6 var(--adaptive));
@@ -300,9 +301,6 @@
 }
 .form__block>p{
   margin-top:calc(24px + 12 var(--adaptive));
-}
-.form__block>p:first-child{
-  margin-top: 0;  
 }
 .form > .input__area{
   height: 53px;
@@ -331,12 +329,6 @@
 .name>div{
   min-width: 27px;
   max-width: 135px; 
-}
-.numbers>*{
-  margin-bottom:30px;
-}
-.numbers>*:last-child{
-  margin-bottom:0;
 }
 /**/
 .gal-x > div > span{

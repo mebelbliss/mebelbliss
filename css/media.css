@@ -40,6 +40,11 @@
     padding-left: calc(0px + 50 var(--adaptive));
     padding-right: calc(0px + 50 var(--adaptive))
   }
+  .sm\:active__item::after {
+    width: 100%;
+    outline-offset: 0;
+    outline: 0
+  }
 }
 @media (min-width:768px) {
   .menu__box {

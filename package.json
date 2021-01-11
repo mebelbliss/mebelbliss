@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "watch": "cross-env NODE_ENV=development postcss css/full.tailwind.css -o  style.css --watch",
+    "dev": "cross-env NODE_ENV=development postcss css/utilities.tailwind.css -o  style.css --watch",
     "build": "cross-env NODE_ENV=production postcss css/full.tailwind.css -o  style.css"
   },
   "dependencies": {

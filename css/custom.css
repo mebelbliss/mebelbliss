@@ -238,7 +238,7 @@
 .menu__item:active > .inactive__item::after,
 .menu__item:focus > .inactive__item::after,
 .menu__item:hover > .inactive__item::after {
-  width: 42px;
+  width: 50px;
   outline-offset: 0;
   outline: 0
 }
@@ -407,6 +407,20 @@
   font-size: .75rem;
   line-height: 1rem
 }
+#callbackform.send > button,
+#callbackform.send > input {
+  opacity: 0
+}
+#callbackform.send > div {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  -webkit-transition-duration: 150ms;
+  transition-duration: 150ms
+}
 .slide-punkts {
   height: 488px
 }
@@ -475,38 +489,31 @@
   height: 200%;
   background-color: var(--green)
 }
+.portfolio > .swiper-wrapper > .swiper-slide > .swiper-lazy > div {
+  background-image: url(/img/svg/logo2.svg)
+}
+.portfolio > .swiper-wrapper > .swiper-slide > .swiper-lazy.swiper-lazy-loaded > div,
+.portfolio > .swiper-wrapper > .swiper-slide-active > .swiper-lazy.swiper-lazy-loaded > div,
+.portfolio > .swiper-wrapper > .swiper-slide-next > .swiper-lazy.swiper-lazy-loaded > div,
+.portfolio > .swiper-wrapper > .swiper-slide-prev > .swiper-lazy.swiper-lazy-loaded > div {
+  opacity: 0
+}
 .form {
-  opacity: 1;
-  -webkit-transition: opacity .5s;
-  transition: opacity .5s;
   max-width: 350px
 }
-.thanks {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  opacity: 0;
-  z-index: -1;
-  -webkit-transition: opacity .5s;
-  transition: opacity .5s
-}
-.send > .thanks {
+#form.send > .thanks {
   opacity: 1;
-  z-index: 0
+  visibility: visible;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  -webkit-transition-duration: 150ms;
+  transition-duration: 150ms
 }
-.send > input,
-.send > label {
+#form.send > button,
+#form.send > input,
+#form.send > label {
   opacity: 0
 }
 .form__margin {
@@ -518,9 +525,6 @@
 }
 .form__block > p {
   margin-top: calc(24px + 12 var(--adaptive))
-}
-.form__block > p:first-child {
-  margin-top: 0
 }
 .form > .input__area {
   height: 53px;
@@ -549,12 +553,6 @@
 .name > div {
   min-width: 27px;
   max-width: 135px
-}
-.numbers > * {
-  margin-bottom: 30px
-}
-.numbers > :last-child {
-  margin-bottom: 0
 }
 .gal-x > div > span {
   width: 2px;
