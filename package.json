@@ -4,8 +4,8 @@
     "build": "cross-env NODE_ENV=production postcss css/full.tailwind.css -o  style.css"
   },
   "dependencies": {
-    "autoprefixer": "^10.1.0",
-    "postcss": "^8.2.1",
+    "autoprefixer": "^10.2.1",
+    "postcss": "^8.2.4",
     "tailwindcss": "^2.0.2"
   },
   "name": "tail",
