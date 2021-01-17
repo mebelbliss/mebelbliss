@@ -331,7 +331,19 @@
   max-width: 135px; 
 }
 /**/
-.gal-x > div > span{
+.gal-x > div > span {
   width: 2px;
   height: 53%;
+}
+.gallery-top > .swiper-wrapper:hover ~ .swiper-button-white,
+.swiper-button-white:hover {
+  @apply translate-x-0 -translate-x-0;
+}
+
+.gallery-thumbs .swiper-slide {
+  opacity: 0.4;
+}
+
+.gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
 }

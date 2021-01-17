@@ -46,6 +46,13 @@ body {
 input:focus {
   outline: 0
 }
+[role=button],
+a,
+button,
+input,
+label {
+  -webkit-tap-highlight-color: transparent
+}
 .b-lazy,
 .swiper-lazy {
   -webkit-transition: opacity .5s ease-in-out;
@@ -141,6 +148,12 @@ input:focus {
 .min-h-screen-header {
   min-height: calc(100vh - (80px + 10 var(--adaptive)))
 }
+.h-screen-header {
+  height: calc(100vh - (80px + 10 var(--adaptive)))
+}
+.max-h-screen-header {
+  max-height: calc(100vh - (80px + 10 var(--adaptive)))
+}
 .h-max {
   height: -webkit-max-content;
   height: -moz-max-content;
@@ -151,4 +164,11 @@ input:focus {
   opacity: .5;
   border: 1px solid #000;
   border-radius: 10px
+}
+.h-4\/5v {
+  height: 80vh
+}
+.dark-filter {
+  -webkit-filter: brightness(40%);
+  filter: brightness(40%)
 }

@@ -558,3 +558,14 @@
   width: 2px;
   height: 53%
 }
+.gallery-top > .swiper-wrapper:hover ~ .swiper-button-white,
+.swiper-button-white:hover {
+  --tw-translate-x: 0px;
+  --tw-translate-x: 0px
+}
+.gallery-thumbs .swiper-slide {
+  opacity: .4
+}
+.gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 1
+}
