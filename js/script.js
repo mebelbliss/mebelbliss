@@ -59,6 +59,7 @@ document.querySelector('#menu__toggle').addEventListener('change', function () {
        window.onpopstate = function(event) {
            if (document.querySelector('#menu__toggle').checked = true) {
              menu_unchk();
+             getmain.classList.remove('dark-filter');
              document.querySelector('#menu__toggle').checked = false;
            }
            window.onpopstate = null;
